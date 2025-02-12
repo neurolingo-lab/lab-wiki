@@ -1,4 +1,6 @@
 # The below file should be added to $HOME/.ssh/config if it exists, otherwise it should be created
+# Use the instructions at https://doc.eresearch.unige.ch/hpc/access_the_hpc_clusters#connect_using_ssh to
+# Add your public key for SSH login
 
 Host yggdrasil
     HostName login1.yggdrasil.hpc.unige.ch
