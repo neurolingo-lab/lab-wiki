@@ -1,0 +1,29 @@
+# The below file should be added to $HOME/.ssh/config if it exists, otherwise it should be created
+
+Host yggdrasil
+    HostName login1.yggdrasil.hpc.unige.ch
+    User YOURUSERNAME
+
+Host baobab
+    HostName login1.baobab.hpc.unige.ch
+    User YOURUSERNAME
+
+Host bamboo
+    HostName login1.bamboo.hpc.unige.ch
+    User YOURUSERNAME
+
+Host neuro
+    HostName LAB_WORKSTATION_IP
+    ProxyJump baobab
+    User YOURUSERNAME_WORKSTATION
+
+Host localneuro
+    HostName 10.195.108.247
+    User berk
+
+Host cpu*
+    HostName %h
+    User gercek
+    ProxyJump CLUSTER_FOR_YOUR_JOB
+    # Below should be removed if you do not use a private/public key pair
+    IdentityFile PATH_TO_PRIVATE_KEY
